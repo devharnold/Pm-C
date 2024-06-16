@@ -7,6 +7,7 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(){
 	//Declare the variables and the data type -> float
@@ -14,7 +15,17 @@ int main(){
 
 	//Prompt fo input from the user.Temparature should be in fahrenheit
 	printf("Enter your temparature in Fahrenheit: ");
-	scanf("%f", &Fahrenheit);
+	result = scanf("%f", &Fahrenheit);
+
+	/**
+	 * Function to check for a valid input for temparature in fahrenheit
+	 * If input is a number: success; proceed
+	 * else: return -1 error
+	 */
+	if (result != 1) {
+		printf("Error: Invalid. Enter a number\n");
+		return -1;
+	}
 
 	//convert Fahrenheit to Celsius
 	Clesius = (Fahrenheit - 32.0) * 5.0 / 9.0;
