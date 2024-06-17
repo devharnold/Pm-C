@@ -11,6 +11,7 @@
 
 //A function prototype to check if is registered
 int isRegistered();
+int requiredAge();
 
 int isRegistered() {
 	char response;
@@ -22,6 +23,18 @@ int isRegistered() {
 		return 1; //This is true
 	else
 		return 0; //This is false
+}
+
+int requiredAge(int age) {
+	int age;
+
+	printf("What is your age?: \n");
+	result = scanf("%d", &age);
+
+	if (result != 1) {
+		printf("Error: Please enter a valid number!\n");
+		return -1;
+	}
 }
 
 int main() {
