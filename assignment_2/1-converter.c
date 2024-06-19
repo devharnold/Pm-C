@@ -28,7 +28,7 @@ int main(){
 	}
 
 	//convert Fahrenheit to Celsius
-	Clesius = (Fahrenheit - 32.0) * 5.0 / 9.0;
+	Celsius = (Fahrenheit - 32.0) * 5.0 / 9.0;
 
 	Kelvin = Celsius + 273.15;//Conversion of Celsius to Kelvin
 	
